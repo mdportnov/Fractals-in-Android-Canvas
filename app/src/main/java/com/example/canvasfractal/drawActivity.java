@@ -7,12 +7,8 @@ public class drawActivity extends AppCompatActivity {
     private static int draw_value=5;
     private static float degree=45;
     private static String selectedFractal;
-
-//    int draw_value=5;
-//    public int getDraw_value() {
-//        return draw_value;
-//    }
-
+    private static float Inc=0;
+    private static int Iter=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +18,8 @@ public class drawActivity extends AppCompatActivity {
         selectedFractal=getIntent().getStringExtra("id");
         draw_value=Integer.parseInt(getIntent().getStringExtra("count"));
         degree=Float.parseFloat(getIntent().getStringExtra("degree"));
+        Inc=Float.parseFloat(getIntent().getStringExtra("Inc"));
+        Iter=Integer.parseInt(getIntent().getStringExtra("Iter"));
     }
 
     @Override
@@ -33,6 +31,8 @@ public class drawActivity extends AppCompatActivity {
         selectedFractal=getIntent().getStringExtra("id");
         draw_value=Integer.parseInt(getIntent().getStringExtra("count"));
         degree=Float.parseFloat(getIntent().getStringExtra("degree"));
+        Inc=Float.parseFloat(getIntent().getStringExtra("Inc"));
+        Iter=Integer.parseInt(getIntent().getStringExtra("Iter"));
     }
 
     public static int getCount(){
@@ -45,5 +45,13 @@ public class drawActivity extends AppCompatActivity {
 
     public static String getSelectedFractal() {
         return selectedFractal;
+    }
+
+    public static float getInc() {
+        return Inc;
+    }
+
+    public static int getIter() {
+        return Iter;
     }
 }

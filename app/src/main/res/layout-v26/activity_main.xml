@@ -93,6 +93,7 @@
             android:textAlignment="center" />
 
         <SeekBar
+
             android:id="@+id/seekBar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -123,15 +124,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:max="80000"
-            android:progress="0" />
+            android:max="20000"
+            android:progress="10000" />
 
         <TextView
-            android:id="@+id/textB2"
+            android:id="@+id/text2B"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="incline"
+            android:hint="degrees"
             android:textAlignment="center" />
 
         <SeekBar
@@ -139,7 +140,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:max="10"
+            android:max="1"
+            android:min="-1"
             android:progress="0" />
     </LinearLayout>
 
