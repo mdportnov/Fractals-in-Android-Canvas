@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e57373"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorAccent"
+        android:onClick="onClick"
+        android:text="Make a fractal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="count of iterations"
+            android:textAlignment="center" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:max="18"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="degrees"
+            android:textAlignment="center" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:max="90"
+            android:progress="45" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:paddingLeft="120dp"
+            android:paddingTop="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/simplefractal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="simple fractal"
+                />
+
+            <RadioButton
+                android:id="@+id/sierpinski"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sierpinski triangle"
+                />
+            <RadioButton
+                android:id="@+id/barnsley"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barnsley fern"
+                />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
